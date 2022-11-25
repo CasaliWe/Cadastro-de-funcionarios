@@ -1,0 +1,37 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+body{
+     height: 100vh;
+     width: 100%;
+     background-color: #e5e5e5;
+}
+
+.hover:hover{
+    color: black;
+    transition: all 400ms;
+    cursor: pointer;
+}
+
+#addCadastro{
+    overflow: auto;
+}
+
+.break-all{
+    word-break: break-all;
+}
+
+@media (max-width: 850px){
+      h4{font-size: 20px;}
+      h5{font-size: 22px;}
+      span{font-size: 10px;}
+}
+
+@media (max-width: 650px){
+    h4{font-size: 18px;}
+    h5{font-size: 16px;}
+    span{font-size: 8px;}
+}
