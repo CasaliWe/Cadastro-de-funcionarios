@@ -62,7 +62,7 @@ function editar(){
         $('#alertInputsEditar').removeClass('d-none') //remove class none
         $('#alertInputsEditar').addClass('d-block') //Add class block para mostrar aviso
     } else {
-        cadastros.push({nome:nome, func:func, idade:idade}) //Add cadastro
+        cadastros.unshift({nome:nome, func:func, idade:idade}) //Add cadastro
 
         localStorage.setItem('cadastros', JSON.stringify(cadastros))
 
