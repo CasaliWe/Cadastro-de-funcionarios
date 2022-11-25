@@ -113,6 +113,16 @@ function chamadaEditar(i){
 
 
 
+//BTN PARA DECIDIR SE VAI SER DELETADO OU NÃO
+function desejaExluir(i){
+        var nomeDel = $(`#nome${i}`).text()
+        $('#nomeExluir').text(nomeDel)     
+        
+        $('#btnDeletar').attr('onclick', `deletar(${i})`)
+}
+
+
+
 //Deletar cadastro
 function deletar(i){
     
@@ -163,7 +173,7 @@ function atualizarLista(){
                  <span id="idade${indice}" class="w-15 break-all">${valor.idade}</span>
                  <span class="d-flex justify-content-around w-15">
                     <span onclick="chamadaEditar(${indice})" data-toggle="modal" data-target="#ModalEdit" class="hover"><i class="fas fa-edit"></i></span>
-                    <span onclick="deletar(${indice})" class="hover"><i class="fas fa-trash-alt"></i></span>
+                    <span onclick="desejaExluir(${indice})" data-toggle="modal" data-target="#ModalDeletar" class="hover"><i class="fas fa-trash-alt"></i></span>
                  </span>
             `
             $(pai).append(filho);
