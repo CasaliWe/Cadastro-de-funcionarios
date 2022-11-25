@@ -1,4 +1,25 @@
 
+//Horário
+setInterval(() => {
+    var agora = new Date()
+    var hora = agora.getHours()
+    var periodo = ''
+
+    if(hora < 6){
+        periodo = 'Boa Madrugada!'
+    } else if(hora < 12){
+        periodo = 'Bom Dia!'
+    } else if(hora < 18){
+        periodo = 'Boa Tarde!'
+    } else if(hora < 23){
+        periodo = 'Boa Noite!'
+    }
+
+
+    $('#horaAtual').text(periodo)
+}, 1000);
+
+
 //Variaveis
 var pai = $('#addCadastro')
 var cadastros = JSON.parse(localStorage.getItem('cadastros')) ?? []
