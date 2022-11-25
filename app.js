@@ -1,7 +1,7 @@
 
 //Variaveis
 var pai = $('#addCadastro')
-var cadastros = []
+var cadastros = JSON.parse(localStorage.getItem('cadastros')) ?? []
 
 
 //Adicionar tarefa
@@ -18,6 +18,8 @@ function add(){
         $('#alertInputsAdd').addClass('d-block') //Add class block para mostrar aviso
     } else {
         cadastros.push({nome:nome, func:func, idade:idade}) //Add cadastro
+
+        localStorage.setItem('cadastros', JSON.stringify(cadastros))
 
         //Reseta valores dos campos inputs
         $('#nomeAdd').val('') 
@@ -61,6 +63,8 @@ function editar(){
         $('#alertInputsEditar').addClass('d-block') //Add class block para mostrar aviso
     } else {
         cadastros.push({nome:nome, func:func, idade:idade}) //Add cadastro
+
+        localStorage.setItem('cadastros', JSON.stringify(cadastros))
 
         //Reseta valores dos campos inputs
         $('#nomeEditar').val('') 
@@ -134,6 +138,8 @@ function deletar(i){
             cadastros.splice( indice, 1)
         }
     })
+
+    localStorage.setItem('cadastros', JSON.stringify(cadastros))
 
     atualizarLista(); //Atualizado lista na tela
 
