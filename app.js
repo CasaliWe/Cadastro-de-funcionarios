@@ -116,9 +116,9 @@ function chamadaEditar(i){
 //BTN PARA DECIDIR SE VAI SER DELETADO OU NÃO
 function desejaExluir(i){
         var nomeDel = $(`#nome${i}`).text()
-        $('#nomeExluir').text(nomeDel)     
+        $('#nomeExluir').text(`Tem certeza que deseja exluir o cadastro de ${nomeDel} ?`) //Mostrando nome de quem será excluido 
         
-        $('#btnDeletar').attr('onclick', `deletar(${i})`)
+        $('#btnDeletar').attr('onclick', `deletar(${i})`) //add function passando o i por parâmetro
 }
 
 
