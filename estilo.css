@@ -24,6 +24,22 @@ body{
     word-break: break-all;
 }
 
+.width{
+      width: 75%;
+}
+
+.w-40{
+     width: 40%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.w-15{
+     width: 15%;
+}
+
 @media (max-width: 850px){
       h4{font-size: 20px;}
       h5{font-size: 22px;}
@@ -31,7 +47,13 @@ body{
 }
 
 @media (max-width: 650px){
-    h4{font-size: 15px;}
-    h5{font-size: 13px;}
+    h4{font-size: 18px;}
+    h5{font-size: 16px;}
     span{font-size: 9px;}
+
+   .w-40{width: 45%;}
+   .w-30{width: 35%;}  
+   .w-15{width: 10%;}
+   .width{width: 90%;}
 }
+

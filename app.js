@@ -158,10 +158,10 @@ function atualizarLista(){
             filho.classList.add('bg-light', 'text-secondary', 'p-1', 'mb-1', 'd-flex', 'justify-content-between')
      
             filho.innerHTML = `
-                 <span id="nome${indice}" class="w-25 break-all">${valor.nome}</span>
-                 <span id="func${indice}" class="w-25 break-all">${valor.func}</span>
-                 <span id="idade${indice}" class="w-25 break-all">${valor.idade}</span>
-                 <span class="d-flex justify-content-around w-25">
+                 <span id="nome${indice}" class="w-30 break-all">${valor.nome}</span>
+                 <span id="func${indice}" class="w-40 break-all">${valor.func}</span>
+                 <span id="idade${indice}" class="w-15 break-all">${valor.idade}</span>
+                 <span class="d-flex justify-content-around w-15">
                     <span onclick="chamadaEditar(${indice})" data-toggle="modal" data-target="#ModalEdit" class="hover"><i class="fas fa-edit"></i></span>
                     <span onclick="deletar(${indice})" class="hover"><i class="fas fa-trash-alt"></i></span>
                  </span>
